@@ -1,0 +1,260 @@
+<!-- <main style="margin-top: 58px " style="text-align: center;">
+   <div class="container pt-4">
+     <div class="row">
+       <div class="col-md-12">
+         <form>
+           <div>
+   
+   
+             <h2>Diseases information page</h2>
+   
+           </div>
+           <fieldset>
+   
+   
+   
+             <div class="form-group">
+               <label for="info"><span class="req">* </span>Id:
+               </label>
+               <input required type="number" [(ngModel)]="disease.id" name="name" id="lastname"
+                 class="form-control phone" maxlength="28" placeholder="Enter Id..." />
+             </div>
+             <div class="form-group">
+               <label for="Name"><span class="req">* </span>Disease Name: </label>
+               <input required type="text" [(ngModel)]=" disease.name" name="name" id="diseaseName"
+                 class="form-control phone" maxlength="28" placeholder="Disease Name..." />
+             </div>
+             <div class="form-group">
+               <label for="info"><span class="req">* </span>Disease Info:
+               </label>
+               <input required type="text" [(ngModel)]="disease.info" name="name" id="lastname"
+                 class="form-control phone" maxlength="28" placeholder="Enter Info..." />
+             </div>
+             <div class="form-group">
+               <label for="info"><span class="req">* </span>Medicine:
+               </label>
+               <input required type="text" [(ngModel)]="disease.med" name="name" id="lastname"
+                 class="form-control phone" maxlength="28" placeholder="Enter Medicine..." />
+             </div>
+   
+   
+   
+   
+             <div class="form-group mt-3 text-center">
+               <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="addDisease()" />
+             </div>
+   
+   
+           </fieldset>
+         </form>
+       </div>
+     </div>
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
+    <div class="py-4 text-center">
+         <button (click)="display()" class="btn btn-dark">Display</button>
+       </div> 
+   
+   <div class="container">
+     <table class="table table-striped text-center">
+       <thead>
+         <tr>
+   
+           <th>Id</th>
+           <th>Disease Name</th>
+           <th>Disease Info</th>
+           <th>Medicine</th>
+           <th>Action</th>
+   
+         </tr>
+       </thead>
+       <tbody>
+   
+   
+         <tr *ngFor="let item of diseases;">
+   
+           <td>{{ item.id }}</td>
+           <td>{{ item.name }}</td>
+           <td>{{ item.info }}</td>
+           <td>{{item.med}}</td>
+   
+   
+           <td>
+             <button class="btn btn-danger" (click)="deleteDisease(item)">
+               Delete
+             </button>
+           </td>
+   
+           <td>
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               Edit
+             </button>
+           </td> 
+          Modal 
+           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+             <div class="modal-dialog">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel">
+                     Edit Disease entry
+                   </h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                   <form>
+                     <fieldset>
+   
+   
+                       <div class="form-group">
+                         <label for="Name"><span class="req">* </span> Name:
+                         </label>
+                         <input required type="text" name="name" id="name" [ngModel]="disease.name"
+                           class="form-control phone" maxlength="28" />
+                       </div>
+                       <div class="form-group">
+                         <label for="lastName"><span class="req">* </span>Info:
+                         </label>
+                         <input required type="text" name="name" id="lastname" [ngModel]="disease.info"
+                           class="form-control phone" maxlength="28" value="{{ item.info }}" />
+                       </div>
+   
+   
+   
+   
+   
+                     </fieldset>
+                   </form>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                     Close
+                   </button>
+                   <button type="button" class="btn btn-primary">
+                     Save changes
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
+   
+         </tr>
+       </tbody>
+     </table>
+   </div>
+   
+   </main> -->
+   <br><br>
+   <main>
+    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+       <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+          <div class="col">
+             <div class="card h-100 shadow-sm">
+                <img src="https://www.shutterstock.com/image-vector/common-alveoli-damages-differences-between-260nw-2164175633.jpg" class="card-img-top" alt="..."> 
+                <div class="card-body">
+                   <div class="clearfix mb-3">
+                      
+                      
+                   </div>
+                   <h5 class="card-title">Acute diseases come on rapidly, and are accompanied by 
+                    distinct symptoms that require urgent or short-term care, and get better
+                     once they are treated. For example, a broken bone that might result from a 
+                     fall must be treated by a doctor and will heal in time. Sometimes, an acute illness,
+                      such as the common cold, will just go away on its own. Most people with acute illnesses 
+                      will soon recover. If hospitalized for an acute illness, after your condition improves,
+                      </h5>
+                   <div class="text-center my-4"> <a href="https://ncoa.org/article/chronic-versus-acute-disease#:~:text=Acute%20diseases%20come%20on%20rapidly,and%20will%20heal%20in%20time." class="btn btn-warning">Acute disease</a> 
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col">
+             <div class="card h-100 shadow-sm">
+                <img src="https://asgct.org/getmedia/025513d5-2060-4979-876b-2fd7b743cbe7/GT-1-Illustrations-02.aspx?width=475&height=446" class="card-img-top" alt="..."> 
+                <div class="card-body">
+                   <div class="clearfix mb-3"> 
+                     
+                   </div>
+                   <h5 class="card-title">When you are living with a genetic disorder, you may have frequent medical needs. It’s important to see a healthcare provider specializing in the condition. They are more likely to know which treatments are best for your needs.</h5>
+                   <div class="d-grid gap-2 my-4"> 
+                      <a href="https://www.genome.gov/For-Patients-and-Families/Genetic-Disorders" class="btn btn-warning">Genetic disease</a> 
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col col-md-12">
+             <div class="card h-100 shadow-sm">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWPPCmFa1pRrI1Z3doC95a-SALGNdDNSgHGg&usqp=CAU" class="card-img-top" alt="..."> 
+                
+                <div class="card-body">
+                   <div class="clearfix mb-3"> 
+ 
+                   </div>
+                   <h5 class="card-title">Chronic diseases are defined broadly as conditions that last 1 year or more and require ongoing medical attention or limit activities of daily living or both. Chronic diseases such as heart disease, cancer, and diabetes are the leading causes of death and disability in the United States. They are also leading drivers of the nation’s $4.1 trillion in annual 
+                      .
+                   </h5>
+                   <div class="text-center my-4"> <a href="https://www.cdc.gov/chronicdisease/about/index.htm#:~:text=Chronic%20diseases%20are%20defined%20broadly,disability%20in%20the%20United%20States." class="btn btn-warning">chronic disease</a> </div>
+                   <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
+                </div>
+             </div>
+          </div>
+        
+       </div> 
+    </div>
+ </main>
+
+
+ <main>
+  <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+        <div class="col">
+           <div class="card h-100 shadow-sm">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTQzAMba0Igc5bYQw9n9LDn-B_AfpEKW9Dww&usqp=CAU" class="card-img-top" alt="..."> 
+              <div class="card-body">
+                 <div class="clearfix mb-3">
+                 </div>
+                 <h5 class="card-title">This is something that the doctor or consultant managing your treatment should explain to you. This will usually follow a series of tests and/or treatment. You may find that your healthcare professional will use other terms such as terminal illness, life-limiting condition or a progressive illness.</h5>
+                 <div class="text-center my-4"> <a href="https://www.khh.org.uk/what-is-an-incurable-illness#:~:text=An%20incurable%20illness%20is%20an,advanced%20cancer" class="btn btn-warning">Incurable disease</a> 
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="col">
+           <div class="card h-100 shadow-sm">
+              <img src="data:image/jpeg;base64,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" class="card-img-top" alt="..."> 
+              <div class="card-body">
+                 <div class="clearfix mb-3"> 
+                 </div>
+                 <h5 class="card-title">the different types of information disorders,4 and categorized three kinds of information disorders: a) Disinformation, b) Misinformation and c) Malinformation. Humans are considered the wisest and most intelligent living beings, who have the capability of differentiating right and wrong..</h5>
+                 <div class="d-grid gap-2 my-4"> 
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7580464/" class="btn btn-warning">Disorder</a> 
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="col col-md-12">
+           <div class="card h-100 shadow-sm">
+              <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQERUSERESEhIVFhUVGBcWFRIWEBUVFRkYFxgVFRcZHSsgGBolHRUWITEhKCsrLi4uFx8zODYtNygtLy0BCgoKDg0OGxAQGzUlICUrLS0tLS0rLS0tLS0tLS0tLS0tLy0tLTAtLTUtLS0tLS0uLS0tLS0tLS8vLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAgUBBAYDB//EAD8QAAIBAgQCBQkGBQQDAQAAAAECAAMRBBIhMUFRBRMiYXEGMlKBkZKhsdEWQlNiwdIjcqLh8BSCssIkM2M0/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAEEBQMCBv/EACURAQACAAUDBQEBAAAAAAAAAAABAgMEESExEhNRQVJhcZEyIv/aAAwDAQACEQMRAD8A6yIiU30BERAnSPA7HTwPA/53yBFtDvE9H1GbiND+h/zl3wjiXnERCSIiAiIgIiaXSXSdLDi9RtTso1c+A/UyYiZnSETMRGst2JxeN8raraUlWmOZ7T/QeyVdXpjENvXqepiv/G071y1p5VbZykcbvpET5onSlcbV6vvsfmZu4fylxKbsHHJlHzFjJnK29JRGcp6w76JzeC8rabaVUKd47S+sbj4y/wAPXWouZGDKeINxONqWrzCxTFrf+Zesmmzer5/2kJMeafFfk39p4h7lCIiEkREBERARElTW5A9vhxMDLiwA47+3YewX9chJVGuSf8twEjCI4IiISREQEREBERASVNrHmNj3iRiBKotjbfkeY4GRnonaGXj939vr+fjPOEQREQkiJ4YzErSptUbZRfx5D1nSI3RM6Rqr/KDpkYZbLY1WGg4AekfpOEr1mdizsWY6kneSxmJaq7VHN2Y37hyA7hPGaWFhRSPlk42NOJPwnSpliFUFidgAST6hPc4BxuaS9xq0QR4jNcTcwOFCZ1qMQ702Apr/AO3QhyGOyEhCLG51252WC6LOS60KKMwFjVzVMoO3ZN89Q72CgC2tzcDpMq+qgOBexIyuBqcj03IHMhSSB3zWnZKuNBHV4im53C9XTB0/Iqkj/cAJp4pKpXtIlCvmylTSoijWzAspBy2zNZuJUkDa8jqNXMzYwWNqUWzU2KnjyPcRxksdTGjquUNcFdew6+cuuttQR3MBwnjWw7pbOjrfbMpF/C+8naY3eonTeHd9B9OJiBlNkqgarwPev0l03mgcyT8h+hnyvCh869XfPcZbaHNw14T6J0X0ouIUlTcoch4Xts4HANv3XtwlLGwejeOGjl8fr/zbluxESsuEREBERASY0W/E6DwG/wBPbIotzaZqNc6bDQeA/wA+MInfZGIiEkREBERAREQEREBERAT0btC/3hv3/m+s85lWsbjeETDET0Zb6j1jl3ju+U84InUnL+W+LsqUhxJc+A0Hxv7J1E4Lytq5sSw9EKvwzf8Aad8vXW6vmraYf2ppa4OgKdPrmbIW0U2uwGovTGnbJB1PmgX3ZZVS56RomotBUF/NXuu1KiQSeAIG/wCQ8pfllNjydw9AuazJUCUbvdqisCyWNyoQEhbqTrxUa3nt5RM9Yjq6o6t9eqY5GLsFZgSTlcnMpAvsVAGkr/8AVDq66Uyci06aKea9apZz3s1j4WHCbeGxAyjDZjTqsiDrBpdyL00JGq5QwS/HMb7CR66oUlXB1KerU6iWO7I62PiRoZd9D9JuaZp1TnSrVpU9cua7B+1cghiOzfMG0PhbVwrYpNAr1U/Kxe38tSmbp4XtzBl7iQtMBKDqMSq5+rBp53quBmLFVC5kWxCi2YpqvNMjxwuTF0neiMtdMjAPohbtL1l7kZgp34lFOltafBYRy5pO9PLUOU3rUiRU2V7Br5g1r6XsSJu4HEMMtNwKdZhXcMQEK5UIQ1VtqL021Iv6rzyxGFNZkqqMrhwHHo5SAxb+Q2ufRZDuGMgVhqLTBCHM5GVnsQqqd1QHXXYsbaXFt77XkzjOqxC69l+wfXsfbb4ytxFQM7MNAWYjuBJIEgGI1G41HiJNq9UaS90t0zFofVYkabZgDzAPtkplNwiIgIiSprffYan6DvgmdGdl72+C/wB/0POQmXa5v/nhMQiCIiEkREBERAmKLcj69PnHVHmvvLIRCN0+rHpL8fpGQemv9X0kIg0+U+rHpr/V9I6rvU/7h+shEGkp9S3Inw1HwkIk+ubib+Ovzg3RViDcaGTsG2sp5fdPhy8JjMp3FvD6H6x1V/N7Xh53skolFlINiLGfO/KX/wDVV8V/4rPowqEabjkdR/afPemOkaVSvUcUUYE2BzVRcAAX0buljK/1M/CpnJ/xEfKpVSSAASToANSTyA4zo8PTCURTqMvW1A1IKG7QpgnYns9aC7C1wCuZSQZStj2sQgWkCLHqxZiORcksR3XtNkYs0lpW1VqJVhcqSOuqkgMNVN/0vcaS7LNbeG6FrUqjUqq5ErI1MO5CKSbFCM1ie2qXG41mv0ngG/1FUdZSVutcAZ7uDmIAsoJB2Fpt4am1Gj11PEEUiTmRlDnKxspakezbMrrm7hbUkC4xwat/EoUsO2ICqzDI61aoZAc9O5Bzi+oFzxBvcTzqOeq4CnUxT3q0ShqOxAz+YCWa3Zt5oPGSxlCpUcYmm1Jm7BfK6AJUGg0a2jZQfEkcJ44StTXrc1AKy02uA1UMMxWmRZibaOZt9GUFRhUtWoMBcXYNYem62UrTG+p7WwvfSR7dK1Hw7OCuWmqCnSSooIJcAvkzDzQHcEjTVRJYLFNVqijlQLiaPasFXt5GHWM2+jKTbv52lf0hjHLtVz9dRdrWYsV02Vw2qPlG/jYnWb7U1oNSym96QqDmKKFsRrbixyr/ALG5iRpsObdCpKsLMCQRxBGhEjNzEfxKYqbslkqc7bI/rAynvUelNMz2l9O6ON6NM/8AzT/iJsTwwK2pUxyRR7AJ7zJnlu14giIkJZVbmw3kqh+6Nhx5nn4TJ7ItxO/d3fWecPPO5ERD0REQEREBERAREQEREBERAREQERECq8p+lBSpZWuTUutwbVAv3iDx3A158Jw9bCWGdG6xBuQLMt/TX7vjqORm15RY/r67EHsr2V8BufWb/CV9GqyEMpKkcR8vDumlg06asfMX677cITdww61Oq++CWp/mJtmp+JsCO8EfegKlbzctOr6O1J/5eCN+XY8LaCaboQSCCCNCCLEHkRwnVxXvRmINJRiBe9Kn1LgecCag4HTzGNr/AHlPKT6RrsKo6uuadUJTPnsKFTsAgqxPZuCDZtO/hNXo3pQZitYAh1yGpYFgLggup0qAEDU9q3HYTaxXRz1h596ibZkdc1LkMoKEKTplJGVuSzx6obNDpqsesWqxo1RTJzlf4ZsVszUypy621QWN9jvKLpGpW2qk5Sbi2XqWPpLl7LHvEsFR8PTam9eiGYgZGvUVEHaN0CMAxOXgCAp5zGH6Vp0bilSWo7d1VaBPfSzkVPAgeEn6EOgej2qLUZlPVFQL7KWVlc9o+aAqtdvug8yAcdL4gZqjAZWq5VVbWNOgoAW4+6WCrpwAPpCbGP6frqgpGoucaHIlNVpD8NAoADcyNjpwMoGYk3JJJ1JO5PMyYj1HrhK/VtcjMpBVl4Mp3HdwIPAgHhPV8F/ERVOZKhGRvSBNteTDYjgRNSX/AJHKXrZWF6a3qH8rDQMvI6+sDuBEXnpiZe6V6rRDtrTMk6W7wdjwMIhPhzOwmU29YRAvPS+XbzufBe4d/fBcDRfWeJ8OQnlCOWYiIeiIiAiIgIiZVSdALmBiIYW0/vEBERAREQEREBERAREQOX6a8mUs9Wk2WwZipF101OU8PjORn1DGUOspul7ZlK35XG8+YGX8vebRMSzM3hxW0TEcsTcXEK4C1b6aLUGrqOAYffX4jhyOnEsKj2xGHZLXsVPmsDdG/lP6bjjaZw2LemQUdlsb2ucp7iNiO6Yw+JZLhTod1IDI3ip0PjvPXr6R3o2P5KjKvsYMfjAlVwmft0VLKTYoLs1Nj908Sp+63Hbe8yXFDRSGq8WBBWnzCEbtzbYcOcivSLJ/6gtIbHKCSw5MzEkjmux5TBxFJvPo2POm+QeJVgw9QyiQNSJt/wDj86/han87/pHXURtRZv56t19iKp+Mkak77yS6LalRzsMrVLN2tOyPNGu+5PrnMdDV2qV6aKFpqTrkUBrDUjObtsLbzvyZVzN9uldyeHrPW9VcL+buPmfU/CZchtjb8p0A8DtPGJT1X+n1ZdCNwRMSSVCNj9PZM9ZzVT7R8pCd0Ik8y+ifUw+kXX0W94ftg1+EIk8y+ifW30AjrOSqPVf5kwaz4QAvtrJ9UeNl8Tr7BrMNVY8TblsPYJGDd6dkc2+A+p+Ew1UnTYchoP7yEQaEREJIiICIiAiIgIiICIiAnzTpdFWvUCeaHa3LvA7gbj1T6WJ8y6SwrUarI97gmxP3hwYc7y1leZUs7/MNaIGsyRbfSXWcxERAREQEREC38lD/AOUng/8AxM76fMcFiDSqJUH3WB8RxHsvPplGqHUMpurAEHuMpZqP9RLRyVo6ZhOIiVV0iIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICQqUlbzlVvEA/OTiBFEA2AHgAJki++s86+ISmLu6oPzED5yoxflRh080tUP5RYe0/peeq0tbiHi16V5l5eVPRtIUWqKiq6ldVFr3IGoGh3nFS26X6eqYgZbBKe+Uak22zHjKmaGDW1a6WZePetr61IiJ1cCIiAnQeTXTnU/wqp/hk6H0Cef5flOfieb0i0aS90vNJ1h9VBuLjUH2TM+fdD9O1MP2fPp+ieH8p4fKdn0b0tSxA7Ddrip0ceriO8TPxMG1PpqYWYrifbeiInJ3IiICIiAiIgIiICIiAiIgIiICIiAiIgJq47pClQF6jheQ3Y+AGs1+n+kf9PRLDzycq+J4+oXM+e1ahYlmJZjuTqTLGDg9e88KuPmO3OkcuqxnleNqVO/e5t/SPrKbFdP4ipvUKjkllHtGvxlZEt1wqV4hRtj4luZZZiTckk8zqZiInRxIiICIiAiIgIiICZViDcEgjYjceExEC/6N8qatPSqOtXntUHr4+v2zq+j+k6VcXpsCeKnRx4j9dp81k6NVkYMpKsNQRuJwxMvW3Gy1hZq9dp3h9TiV/QfSQxFIPsw0Ycm5+B3lhKExMTpLTraLRrBERISREQEREBERAREQEREBERAREQOO8t696lNOCqW9bG3/AF+M5qXPla18U3cqD+kH9ZTTTwo0pDHx51xJIiJ0cSIiAiIgIiICIiAiIgIiICIiBeeSGLyV8hPZqC3+4aqfmPXO6ny7C1sjo/osrew3n1CUc1XS0S0snbWsx4ZiIlZcIiICIiAiIgIiICIiAiIgIiIHB+V9O2JJ9JUPwy/9ZSzuvKbodsQFanbrFuLHTMp4X5j9TOa+zmK/C/rp/umhhYteiNZZWPg3650hVRLT7O4r8E+/T/dH2exX4J96n+6de5Xy5dq/tn8VcS0+z2K/BPvU/wB0fZ3Ffgn36f7o7lfJ2r+2fxVxLX7O4r8E+/T/AHR9nMV+F/XT/dI7lPJ2r+2fxVRLb7N4r8L+un+6Z+zWK/CHv0/rHcp5O1f2z+KiJcDyZxP4Y99PrM/ZjE+gvvr9Y7lPJ2cT2z+KaJdDyXxPor74j7LYn0U98R3aeU9nE9sqWJd/ZXE8k97+0z9lcR/8/eP0ju08nZxPbKjiXv2UxHOl7x/bM/ZLEc6XvN+2R3aeTsYnhQmfUsP5i/yj5Tj6PkjVzDO9MLfWxYtbjbszswJWzF6200Xcph2rr1QzERKq4REQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERA//9k=" class="card-img-top" alt="..."> 
+             
+              <div class="card-body">
+                 <div class="clearfix mb-3"> 
+                 </div>
+                 <h5 class="card-title">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices.1 Mental health is important at every stage of life, from childhood and adolescence through adulthood.
+                    .
+                 </h5>
+                 <div class="text-center my-4"> <a href="https://www.cdc.gov/mentalhealth/learn/index.htm#:~:text=Mental%20health%20includes%20our%20emotional,others%2C%20and%20make%20healthy%20choices.&text=Mental%20health%20is%20important%20at,childhood%20and%20adolescence%20through%20adulthood." class="btn btn-warning">Mental Problem</a> </div>
+                 <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
+              </div>
+           </div>
+        </div>
+        
+     </div> 
+  </div>
+</main>

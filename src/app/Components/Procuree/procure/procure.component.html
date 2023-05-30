@@ -1,0 +1,113 @@
+<main style="margin-top: 58px">
+  <div class="container">
+    <div class="row pt-4">
+      <div class="col-md-12">
+        <form>
+          <div>
+            <h2>Procure System details page</h2>
+        </div>
+
+          <fieldset>
+
+
+
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span> Medicine Id </label>
+              <input required type="number" [(ngModel)]="med.medicineId" name="name" id="name"
+                class="form-control phone" maxlength="28" placeholder="Enter Medicine Id.." />
+            </div>
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span>Medicine Name: </label>
+              <input required type="text" [(ngModel)]="med.medicineName" name="name" id="name"
+                class="form-control phone" maxlength="28" placeholder="Enter Medicine Name.." />
+            </div>
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span>Description: </label>
+              <input required type="text" [(ngModel)]="med.description" name="name" id="name"
+                class="form-control phone" maxlength="28" placeholder="Enter description.." />
+            </div>
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span>Dosage: </label>
+              <input required type="text" [(ngModel)]="med.dosage" name="name" id="name"
+                class="form-control phone" maxlength="28" placeholder="Enter dosage.." />
+            </div>
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span> Medicine Price </label>
+              <input required type="number" [(ngModel)]="med.price" name="name" id="name"
+                class="form-control phone" maxlength="28" placeholder="Enter Price.." />
+            </div>
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span>Delivery Date: </label>
+              <input required type="date" [(ngModel)]="med.manufactureDate" name="date" id="date"
+                class="form-control phone" maxlength="28" placeholder="Enter Manufacture date.." />
+            </div>
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span>Expiry Date: </label>
+              <input required type="date" [(ngModel)]="med.expiryDate" name="date" id="date"
+                class="form-control phone" maxlength="28" placeholder="Enter Expiry date.." />
+            </div>
+
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span> Stock </label>
+              <input required type="number" [(ngModel)]="med.currentStock" name="name" id="name"
+                class="form-control phone" maxlength="28" placeholder="Enter Stock.." />
+            </div>
+            <div class="form-group mt-3 text-center">
+              <input class="btn btn-success" type="submit" name="submit_reg" value="Register"
+                (click)="addMedicine()" />
+            </div>
+          </fieldset>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="py-4 text-center">
+    <button (click)="displayManufacturers()" class="btn btn-dark">
+      Display
+    </button>
+  </div> -->
+
+  <div class="container">
+    <div class="form-group mt-3 text-center">
+      <input class="btn btn-primary" type="submit" name="display" value="Display"
+        (click)="display()" />
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Dosage</th>
+            <th>Price</th>
+            <th>Manufacture Date</th>
+            <th>Expiry Date</th>
+            <th>Stock</th>
+            <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of procureArr; let i = index">
+          <td>{{ item.medicineId }}</td>
+            <td>{{ item.medicineName }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.dosage }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.manufactureDate }}</td>
+            <td>{{ item.expiryDate }}</td>
+            <td>{{ item.currentStock }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteMedicine(item.medicineId)">
+              Delete
+            </button>
+          </td>
+
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

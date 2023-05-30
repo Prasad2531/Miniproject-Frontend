@@ -1,0 +1,9 @@
+@media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+}
+img{
+    height:100%;
+    width: 100%;
+}

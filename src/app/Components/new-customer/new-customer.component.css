@@ -1,0 +1,147 @@
+body {
+    padding-top:50px;
+}
+fieldset {
+    border: thin solid #ccc;
+    border-radius: 4px;
+    padding: 25px;
+    background: #fbfbfb;
+}
+legend {
+   color: #678;
+}
+.form-control {
+    width: 100%;
+}
+label small {
+    color: #678 !important;
+}
+span.req {
+    color:maroon;
+    font-size: 112%;
+}
+
+@media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+}
+
+.container {
+    max-width: 875px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  input[type="search"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    padding: 6px 8px;
+    margin-right: 10px;
+  }
+
+  input[type="search"]:focus {
+    border-bottom-color: #007bff;
+  }
+
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+  }
+
+  .form-control {
+    font-size: 16px;
+    border-radius: 0;
+  }
+
+  .form-group label {
+    font-weight: bold;
+  }
+
+  .req {
+    color: red;
+  }
+
+  .phone {
+    padding: 6px 12px;
+  }
+
+  input[type="submit"] {
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .row {
+    margin-bottom: 20px;
+  }
+
+
+@media (min-width: 768px){
+.col-md-12 {
+
+      flex: 0 0 auto;
+      width: 100%;
+      margin-bottom: 25px;
+
+  }}
+  h2 {
+    text-align: center;
+    margin: 10px;
+    background-color: blanchedalmond;
+  }
+
+  .form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.form-control{
+  width: 90%;
+}
+.medicineForm{
+  background-color: white;
+    width: 600px;
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+.group{
+  display: flex;
+  margin: 15px 0;
+}
+
+.group label{
+  width: 150px;
+  line-height: 40px;
+  height: 40px;
+}
+.action{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 20px;
+}
+.BillForm{
+  background-color: red;
+    width: 600px;
+    padding: 20px 50px;
+    border-radius: 5px;
+
+}

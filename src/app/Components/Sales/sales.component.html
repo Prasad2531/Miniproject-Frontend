@@ -1,0 +1,154 @@
+<main style="margin-top: 58px">
+  <div class="container pt-4">
+    <h2>Sale details page</h2>
+    <br /><br />
+    <ng-container *ngIf="bCus == true; then displayCustomer"></ng-container>
+
+    <ng-template #displayCustomer>
+      <div class="row">
+        <div class="col-md-12">
+          <form>
+            <fieldset>
+              <h4 class="text-center">Add Sales details</h4>
+              <!-- <div class="form-group">
+                <label for="customerId"><span class="req">* </span> saleId:
+                </label>
+                <input required type="number" [(ngModel)]="Sale.saleId" name="number" id="Id"
+                  class="form-control phone" maxlength="28" placeholder="Enter your saleId..." />
+              </div> -->
+              <div class="form-group">
+                <label for="medicineName"><span class="req">* </span> Medicine Name:
+                </label>
+                <input required type="text" [(ngModel)]="Sale.medicineName" name="name" id="medicineName"
+                  class="form-control phone" maxlength="28" placeholder="Enter your MedicineName..." />
+              </div>
+
+             
+              <div class="form-group">
+                <label for="contact"><span class="req">* </span>Quantity:
+                </label>
+                <input required type="number" [(ngModel)]="Sale.medicineQunatity" name="quantity" id="quantity"
+                  class="form-control phone" maxlength="28" placeholder="Enter quantity.." />
+              </div>
+              <div class="form-group">
+                <label for="contact"><span class="req">* </span>Price:
+                </label>
+                <input required type="number" [(ngModel)]="Sale.price" name="price" id="price"
+                  class="form-control phone" maxlength="28" placeholder="Enter Price.." />
+              </div>
+              <div class="form-group">
+                  <label for="date"><span class="req">* </span> Date:
+                  </label>
+                  <input required type="date" [(ngModel)]="Sale.date" name="date" id="date"
+                    class="form-control phone" maxlength="28" placeholder="Enter Date.." />
+                </div>
+             
+           
+             
+            
+               <div class="form-group mt-3 text-center">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="Register"
+                  (click)="addSale()" />
+              </div>
+            </fieldset>
+          </form>
+          <script src="http://code.amgularjs.org/1.2.3/angular.min.js"></script>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</main>
+ 
+<div> hi</div>
+<main style="margin-top: 58px">
+  <div class="container pt-4">
+    <div class="form-group">
+      <label for="date"><span class="req">* </span> Date:
+      </label>
+      <input required type="date" [(ngModel)]="Sale.date" name="date" id="date"
+        class="form-control phone" maxlength="28" placeholder="Enter Date.." />
+    </div>
+    <div class="form-group mt-3 text-center">
+      <input class="btn btn-success" type="submit" name="submit_reg" value="Search Sale by Date"
+        (click)="search(Sale.date)" />
+    </div>
+    <table class="table table-striped text-center">
+     
+      <thead>
+        <tr>
+          <th>Sale Id</th>
+          <th>Medicine Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+         <th> Date</th>
+         <th>Total</th>
+         <th>Actions</th>
+         <th> </th>
+         </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of sales">
+          <td>{{ item.saleId }}</td>
+          <td>{{ item.medicineName }}</td>
+          <td>{{item.medicineQunatity}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.date}}</td>
+          <td>{{item.medicineQunatity * item.price}}</td>
+          
+          
+
+         
+          <td><button class="btn btn-danger" (click)="deleteData(item)">Delete</button></td>
+         
+          
+          <td><button (click)="openForm(item)" class="btn btn-primary">Edit</button></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+
+
+
+
+
+<main style="margin-top: 58px" *ngIf="showForm">
+  <div class="container pt-4">
+    <div class="form-wrapper">
+      <div class="medicineForm">
+        <h2 class="text-info text-center">{{formHeader}}</h2>
+        <div class="group">
+            <label for="firstname">Sale Id</label>
+            <input type="number" class="form-control" [(ngModel)]="saleId" name="saleId" required minlength="5">
+        </div>
+        <div class="group">
+          <label for="medicine_desc">Medicine Name</label>
+          <input type="text" class="form-control" [(ngModel)]="medicineName" name="medicineName" required minlength="5">
+      </div>
+   <div class="group">
+          <label for="medicine_mfg">Quantity</label>
+          <input type="number" class="form-control" [(ngModel)]="medicineQunatity" name="quantity" required min="1">
+      </div>
+        <div class="group">
+          <label for="medicine_mfg">Price</label>
+          <input type="number" class="form-control" [(ngModel)]="price" name="price" required min="1">
+      </div>
+        <div class="group">
+          <label for="medicine_mfg"> Date</label>
+          <input type="date" class="form-control" [(ngModel)]="date" name="Date" required min="1">
+      </div>
+       
+     
+        <div class="action">
+            <button class="btn btn-primary save" (click)="saveSale()" >Save Changes</button>
+            <button class="btn btn-danger cancel" (click)="closeForm()">Cancel</button>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+</main> 
+
