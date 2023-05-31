@@ -110,13 +110,13 @@ export class DashboardComponent {
     }
     if(this.medicineId){
       body['medicineId'] =this.medicineId;
-      this.medicineService.putMedicine(body).subscribe(
+      this.procureSer.putMedicine(body).subscribe(
         ()=>{
           this.medicine()
         },
       )
     }else{
-      this.medicineService.postMedicine(body).subscribe(
+      this.procureSer.postMedicine(body).subscribe(
         ()=>{
           this.medicine()
         },

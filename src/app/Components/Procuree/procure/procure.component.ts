@@ -12,7 +12,7 @@ import { Medicine } from 'src/app/Model/Medicine';
 })
 export class ProcureComponent implements OnInit {
   procureArr! : any;
-  med:Procure = new Procure(0,"","","",0,new Date("2023-01-01"),new Date("2024-03-03"),0);
+  med:Procure = new Procure(1,"","","",1,new Date("2023-01-01"),new Date("2024-03-03"),0);
   medicineId!:number;
   medicineName!:string;
   description!:string;
