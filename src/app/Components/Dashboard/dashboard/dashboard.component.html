@@ -90,37 +90,37 @@
         <h2 class="text-info text-center">{{formHeader}}</h2>
         <div class="group">
             <label for="firstname">Medicine Id</label>
-            <input type="number" class="form-control" [(ngModel)]="medicine.id" name="customerId" required minlength="5">
+            <input type="number" class="form-control" [(ngModel)]="medicineId" name="customerId" required minlength="5">
         </div>
         <div class="group">
           <label for="medicine_desc">Med Name</label>
-          <input type="text" class="form-control" [(ngModel)]="medicine.medicineName" name="customerName" required minlength="5">
+          <input type="text" class="form-control" [(ngModel)]="medicineName" name="customerName" required minlength="5">
       </div>
 
         <div class="group">
             <label for="medicine_mfg">Description</label>
-            <input type="text" class="form-control" [(ngModel)]="medicine.description" name="contact" required min="1">
+            <input type="text" class="form-control" [(ngModel)]="description" name="contact" required min="1">
         </div>
 
         <div class="group">
           <label for="medicine_mfg">Dosage</label>
-          <input type="text" class="form-control" [(ngModel)]="medicine.dosage" name="dosage" required min="1">
+          <input type="text" class="form-control" [(ngModel)]="dosage" name="dosage" required min="1">
       </div>
         <div class="group">
           <label for="medicine_mfg">MPrice</label>
-          <input type="number" class="form-control" [(ngModel)]="medicine.price" name="medicineId" required min="1">
+          <input type="number" class="form-control" [(ngModel)]="price" name="medicineId" required min="1">
       </div>
         <div class="group">
           <label for="medicine_mfg">Mfg Date</label>
-          <input type="date" class="form-control" [(ngModel)]="medicine.manufactureDate" name="medicineName" required min="1">
+          <input type="date" class="form-control" [(ngModel)]="manufactureDate" name="medicineName" required min="1">
       </div>
         <div class="group">
           <label for="medicine_mfg">Exp Date</label>
-          <input type="date" class="form-control" [(ngModel)]="medicine.expiryDate" name="quantity" required min="1">
+          <input type="date" class="form-control" [(ngModel)]="expiryDate" name="quantity" required min="1">
       </div>
         <div class="group">
           <label for="medicine_mfg">Stock</label>
-          <input type="number" class="form-control" [(ngModel)]="medicine.Stock" name="price" required min="1">
+          <input type="number" class="form-control" [(ngModel)]="currentStock" name="price" required min="1">
       </div>
 
         <div class="action">
