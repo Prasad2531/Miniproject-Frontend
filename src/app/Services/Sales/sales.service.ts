@@ -22,8 +22,8 @@ export class SalesService {
     return this.http.delete("http://localhost:8999/sale/deleteSale/"+id);
   }
   public updateSale(user:Sales){
-    alert("update");
-    return this.http.put("http://localhost:8999/sale/updateSales",user);
+    // alert("update");
+    return this.http.put("http://localhost:8999/sale/updateSale",user);
   }
 
   
