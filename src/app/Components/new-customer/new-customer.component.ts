@@ -52,9 +52,6 @@ quantity!:number;
 public addCustomer = async () => {
   let resp = await this.customerService.postCustomer(this.Customer);
   resp.subscribe((data) => (this.customers = data));
-  location.reload();
-
-
 }
 
   openBill(){

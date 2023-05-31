@@ -42,13 +42,11 @@ export class ProcureComponent implements OnInit {
         console.log(err);
       }
     );
-    location.reload();
   }
 
   public addMedicine = async () => {
     let resp = await this.procureSer.postMedicine(this.med);
     resp.subscribe((data) => (this.procureArr = data));
-    // location.reload();
 
 
 }
@@ -62,7 +60,6 @@ export class ProcureComponent implements OnInit {
         console.log(err);
       }
     );
-    location.reload();
   }
 
 }

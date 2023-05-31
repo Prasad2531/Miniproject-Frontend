@@ -62,7 +62,6 @@ showForm= false;
 public addSale = async () => {
   let resp = await this.saleService.postSale(this.Sale);
   resp.subscribe((data) => (this.sales = data));
-  location.reload();
 
 }
 
